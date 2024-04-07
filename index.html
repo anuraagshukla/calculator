@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Calculator</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="container bg-secondary mt-5 p-2" style="
+        width: 400px;
+        height: 500px;
+        box-shadow: 7px 7px 16px black, -7px -7px 16px black, 7px -7px 8px grey;
+        border-radius: 20px;
+      ">
+    <div class="container position-relative">
+      <div class="position-absolute" style="
+      border: 3px solid;
+            border-radius: 5px;
+            background-color: white;
+            width: 360px;
+            height: 78px;
+            margin-top: 20px;
+          ">
+        <input type="text" id="display" style="padding: 12px; font-size: 30px; font-weight: 700" size="16"
+          maxlength="20" />
+      </div>
+
+      <div class="position-absolute" style="
+            background-color: rgb(102, 100, 100);
+            width: 350px;
+            height: 340px;
+            top: 120px;
+            border-radius: 20px;
+            box-shadow: 7px 7px 7px grey;
+          ">
+        <div class="row">
+          <div class="col-4">
+            <button type="button" value="" class="bot"  onclick="cls()">C</button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="%" class="bot">%</button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="/" class="bot" onclick="operation('/')">÷</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <button type="button" value="*" class="bot" onclick="operation('*')">x</button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="-" class="bot"onclick="operation('-')">-</button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="+" class="bot" id="plus" onclick="operation('+')" >+</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <button type="button" value="7" class="bot" onclick="operation(7)">
+              7
+            </button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="8" class="bot" onclick="operation(8)">8</button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="9" class="bot" onclick="operation(9)">9</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <button type="button" value="4" class="bot" onclick="operation(4)">4</button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="5" class="bot" onclick="operation(5)">5</button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="6" class="bot"onclick="operation(6)">6</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <button id="one" value="1" type="button" class="bot" onclick="operation(1)">1</button>
+          </div>
+          <div class="col-4">
+            <button id="two" value="2" type="button" class="bot" onclick="operation(2)">2</button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="3" id="three" class="bot" onclick="operation(3)" >3</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <button type="button" value="0" class="bot" onclick="operation(0)">0</button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="." class="bot" onclick="operation('.')">.</button>
+          </div>
+          <div class="col-4">
+            <button type="button" value="=" id="eql" class="bot" onclick="exe()">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
